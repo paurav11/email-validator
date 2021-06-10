@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+* {
+    margin: 0;
+    font-size: 1em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+   
+body::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: black;
+}
+
+header {
+    padding: 10px;
+    background-color: black;
+    border: 2px solid white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+#app-name {
+    background: -webkit-linear-gradient(45deg,green,yellow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px;
+    font-size: 2.5em;
+    font-family: 'Source Code Pro', monospace;
+    
+}
+
+#app-desc {
+    padding:10px;
+    color: white;
+    font-size: 1em;
+}
+
+#email-validator {
+    padding:10px;
+    height: 75vh;
+    background-image: linear-gradient(45deg,green,yellow);
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+#email-verification-form {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+#email-input {
+    margin: 5px;
+    padding-left:10px;
+    padding-right:10px;
+    height: 3em;
+    width: 20em;
+    color: black;
+    font-size: 1.2em;
+    font-family: 'Source Code Pro', monospace;
+    border: 2px dashed black;
+    border-radius: 5px;
+}
+
+#email-input:focus {
+    border: 2px solid black;
+    outline: none;
+}
+
+#btn-verify {
+    margin: 5px;
+    height: 3em;
+    width: 6em;
+    color: black;
+    font-weight: 700;
+    background-color:white;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#btn-verify:hover {
+    cursor: pointer;
+    transform:scale(0.95);
+}
+
+footer {
+    padding: 10px;
+    background-color: black;
+    border: 2px solid white;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+#dev-message {
+    color: white;
+}
+
+#github-link:link {
+    color:white;
+    text-decoration: none;
+}
+
+#github-link:visited {
+    color:white;
+    text-decoration: none;
+}
+
+#github-link:hover {
+    color:white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#github-link:active {
+    color: white;
+    text-decoration: none;
+}
