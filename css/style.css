@@ -38,7 +38,11 @@ header {
     padding: 10px;
     font-size: 2.5em;
     font-family: 'Source Code Pro', monospace;
-    
+}
+
+.fa-envelope-open {
+    color: white;
+    font-size: 1em;
 }
 
 #app-desc {
@@ -48,32 +52,34 @@ header {
 }
 
 #email-validator {
-    padding:10px;
-    height: 75vh;
+    padding:20px;
     background-image: linear-gradient(45deg,green,yellow);
     border: 2px solid white;
     border-radius: 50px;
 }
 
 #email-verification-form {
-    position: absolute;
-    left: 50%;
-    top: 60%;
-    transform: translate(-50%, -50%);
     padding: 10px;
+    margin: 20px;
 }
 
 #email-input {
-    margin: 5px;
+    margin: 10px;
     padding-left:10px;
     padding-right:10px;
     height: 3em;
-    width: 20em;
-    color: black;
+    width: 60vw;
+    color: white;
     font-size: 1.2em;
     font-family: 'Source Code Pro', monospace;
+    background-color: rgba(0, 0, 0, 0.1);
     border: 2px dashed black;
     border-radius: 5px;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.7;
 }
 
 #email-input:focus {
@@ -87,7 +93,7 @@ header {
     width: 6em;
     color: black;
     font-weight: 700;
-    background-color:white;
+    background-color:  rgba(0, 0, 0, 0.1);
     border: 2px solid black;
     border-radius: 5px;
 }
@@ -95,6 +101,39 @@ header {
 #btn-verify:hover {
     cursor: pointer;
     transform:scale(0.95);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#response {
+    margin: 0 25vw 0 25vw;
+}
+
+#response-table, th, td {
+    padding: 5px;
+    width: 45vw;
+    border: 1px solid black;
+    border-radius: 5px;
+    border-collapse: collapse;
+}
+
+#response-table a:link {
+    color:black;
+    text-decoration: none;
+}
+
+#response-table a:visited {
+    color:black;
+    text-decoration: none;
+}
+
+#response-table a:hover {
+    color:black;
+    text-decoration: none;
+}
+
+#response-table a:active {
+    color:black;
+    text-decoration: none;
 }
 
 footer {
@@ -128,4 +167,58 @@ footer {
 #github-link:active {
     color: white;
     text-decoration: none;
+}
+
+#support {
+    width: 50vw;
+    margin: 0 25vw 0 25vw;
+}
+
+@media screen and (max-width: 500px) {
+    #support {
+        width: 100vw;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    #email-validator {
+        width: 100%;
+        margin: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    footer {
+        padding: 5px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    #email-validator {
+        width: 100%;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    #email-input {
+        font-size: 0.8em;
+    }
+
+    #response {
+        margin: 0 0 0 35px;
+    }
+
+    footer {
+        padding: 3px;
+        width: 100%;
+    }
+
+    #buymeacoffee {
+        height: 20px;
+        width: 80px;
+    }
 }
