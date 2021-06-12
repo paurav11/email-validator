@@ -12,8 +12,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="text/javascript" src="js/api.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
@@ -23,68 +23,69 @@
         <p id="app-desc">A simple <i><b>Web App</b></i> to validate any <i><b>Email</b></i>.</p>
         <br>
         <a class="github-button" href="https://github.com/paurav11" data-size="large" aria-label="Follow @paurav11 on GitHub">Follow @paurav11</a>
-        <a class="github-button" href="https://github.com/sponsors/paurav11" data-icon="octicon-heart" data-size="large" aria-label="Sponsor @paurav11 on GitHub">Sponsor</a>
+        <a class="github-button" href="https://github.com/paurav11/email-validator" data-icon="octicon-star" data-size="large" aria-label="Star paurav11/email-validator on GitHub">Star</a>
+        <a class="github-button" href="https://github.com/paurav11/email-validator/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork paurav11/email-validator on GitHub">Fork</a>
     </header>
     <div id="email-validator">
-        <form id="email-verification-form" action="#" onsubmit="verifyEmail()">
+        <form id="email-verification-form" action="javascript:void(0);" onsubmit="verifyEmail()">
             <input id="email-input" type="email" placeholder="abc@xyz.com" required>
             <input id="btn-verify" type="submit" value="Verify">
         </form>
         <br>
         <h1 id="result-heading" style="text-decoration: underline; font-size: 1.2em;">Results</h1>
         <br>
-        <div id="response" class="hidden">
+        <div id="response">
             <p id="email"></p>
             <br>
             <table id="response-table">
                 <tr>
-                    <th>Properties</th>
                     <th>Info</th>
+                    <th>Properties</th>
                     <th>Status</th>
                 </tr>
                 <tr>
-                    <td>Deliverability</td>
                     <td><a target="_blank" href="https://www.campaignmonitor.com/resources/glossary/email-deliverability/"><i class="fas fa-info-circle"></i></a></td>
+                    <td>Deliverability</td>
                     <td id="deliverability">--</td>
                 </tr>
                 <tr>
-                    <td>Quality Score</td>
                     <td><a target="_blank" href="https://chelucas.fr/email-quality-score/#:~:text=Quality%20score%20is%20a%20good,are%20not%20opening%20your%20emails."><i class="fas fa-info-circle"></i></a></td>
+                    <td>Quality Score</td>
                     <td id="quality-score">--</td>
                 </tr>
                 <tr>
-                    <td>Is email format valid?</td>
                     <td><a target="_blank" href="https://help.xmatters.com/ondemand/trial/valid_email_format.htm#:~:text=A%20valid%20email%20address%20consists,the%20left%20of%20the%20%40%20symbol.&text=For%20example%2C%20in%20the%20address,com%22%20is%20the%20email%20domain."><i class="fas fa-info-circle"></i></a></td>
+                    <td>Is email format valid?</td>                    
                     <td id="is-valid-format">--</td>
                 </tr>
                 <tr>
-                    <td>Is email free?</td>
                     <td><a target="_blank" href="https://whatis.techtarget.com/definition/freemail#:~:text=Freemail%20is%20a%20service%20that,cases%2C%20for%20some%20personal%20information."><i class="fas fa-info-circle"></i></a></td>
+                    <td>Is email free?</td>
                     <td id="is-free-email">--</td>
                 </tr>
                 <tr>
-                    <td>Is email disposable?</td>
                     <td><a target="_blank" href="https://en.wikipedia.org/wiki/Disposable_email_address"><i class="fas fa-info-circle"></i></a></td>
+                    <td>Is email disposable?</td>
                     <td id="is-disposable-email">--</td>
                 </tr>
                 <tr>
-                    <td>Is email role-based?</td>
                     <td><a target="_blank" href="https://zift123.zendesk.com/hc/en-us/articles/213710527-What-are-role-based-email-addresses-and-how-does-the-system-handle-them-#:~:text=Role%2Dbased%20email%20addresses%20(like,a%20distribution%20list%20of%20recipients."><i class="fas fa-info-circle"></i></a></td>
+                    <td>Is email role-based?</td>
                     <td id="is-role-email">--</td>
                 </tr>
                 <tr>
-                    <td>Is email catch-all?</td>
                     <td><a target="_blank" href="https://www.zoho.com/mail/help/adminconsole/catch-all-setup.html#:~:text=Notification%20Address-,Catch%2Dall%20Address,will%20not%20be%20bounced%20back.&text=This%20also%20helps%20in%20preventing,the%20domain%20from%20bouncing%20back."><i class="fas fa-info-circle"></i></a></td>
+                    <td>Is email catch-all?</td>                    
                     <td id="is-catchall-email">--</td>
                 </tr>
                 <tr>
-                    <td>Is MX found?</td>
                     <td><a target="_blank" href="https://manuals.gfi.com/en/kerio/connect/content/server-configuration/mail-delivery-and-dns-records/what-is-an-mx-record-and-how-is-it-created-1210.html#:~:text=An%20MX%20(mail%20exchange)%20record,receive%20email%20to%20your%20domain."><i class="fas fa-info-circle"></i></a></td>
+                    <td>Is MX found?</td>                    
                     <td id="is-mx-found">--</td>
                 </tr>
                 <tr>
-                    <td>Is SMTP valid?</td>
                     <td><a target="_blank" href="https://sendgrid.com/blog/what-is-an-smtp-server/#:~:text=An%20SMTP%20(Simple%20Mail%20Transfer,between%20email%20senders%20and%20receivers."><i class="fas fa-info-circle"></i></a></td>
+                    <td>Is SMTP valid?</td>                    
                     <td id="is-smtp-valid">--</td>
                 </tr>
             </table>

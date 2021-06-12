@@ -23,9 +23,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 header {
-    padding: 10px;
+    padding: 10px 10px 20px 10px;
     background-color: black;
-    border: 2px solid white;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
 }
@@ -52,9 +51,8 @@ header {
 }
 
 #email-validator {
-    padding:20px;
+    padding:20px 20px 40px 20px;
     background-image: linear-gradient(45deg,green,yellow);
-    border: 2px solid white;
     border-radius: 50px;
 }
 
@@ -79,7 +77,7 @@ header {
 
 ::placeholder {
     color: white;
-    opacity: 0.7;
+    opacity: 0.85;
 }
 
 #email-input:focus {
@@ -137,9 +135,8 @@ header {
 }
 
 footer {
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
     background-color: black;
-    border: 2px solid white;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
@@ -174,34 +171,92 @@ footer {
     margin: 0 25vw 0 25vw;
 }
 
+/*------------------------------------------------------------*/
+/*Media queries are used to make this web app mobile-friendly.*/
+/*------------------------------------------------------------*/
+
 @media screen and (max-width: 500px) {
-    #support {
-        width: 100vw;
+    header {
         margin: 0;
+        width: 100%;
+    }
+
+    #email-validator {
+        margin: 0;
+        width: 100%;
+    }
+
+    footer {
+        margin: 0;
+        width: 100%;
+    }
+
+    #support {
+        margin: 0;
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 400px) {
 
-    #email-validator {
-        width: 100%;
+    header {
         margin: 0;
+        width: 100%;
+    }
+
+    #email-validator {
+        margin: 0;
+        width: 100%;
         padding-left: 5px;
         padding-right: 5px;
     }
 
     footer {
-        padding: 5px;
+        margin: 0;
         width: 100%;
     }
 }
 
 @media screen and (max-width: 360px) {
 
-    #email-validator {
+    header {
+        margin: 0;
         width: 100%;
-        padding-left: 3px;
-        padding-right: 3px;
+    }
+
+    #email-validator {
+        margin: 0;
+        width: 100%;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    #email-input {
+        font-size: 1em;
+    }
+
+    #response {
+        margin: 0 25% 0 25%;
+    }
+
+    footer {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    header {
+        margin: 0;
+        width: 100%;
+    }
+
+    #email-validator {
+        margin: 0;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     #email-input {
@@ -209,16 +264,11 @@ footer {
     }
 
     #response {
-        margin: 0 0 0 35px;
+        margin: 0 25% 0 25%;
     }
 
     footer {
-        padding: 3px;
+        margin: 0;
         width: 100%;
-    }
-
-    #buymeacoffee {
-        height: 20px;
-        width: 80px;
     }
 }
