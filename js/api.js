@@ -14,7 +14,7 @@ function httpGetAsync(url) {
                 var response = xmlHttp.responseText;
                 var emailStatus = JSON.parse(response);
 
-                document.getElementById("email").innerHTML = 'Showing results for: ' + emailStatus.email;
+                document.getElementById("email").innerHTML = 'Showing results for: ' + '"' + emailStatus.email + '"';
                 document.getElementById("deliverability").innerHTML = emailStatus.deliverability;
                 document.getElementById("quality-score").innerHTML = emailStatus.quality_score;
                 document.getElementById("is-valid-format").innerHTML = emailStatus.is_valid_format.text;
@@ -24,6 +24,9 @@ function httpGetAsync(url) {
                 document.getElementById("is-catchall-email").innerHTML = emailStatus.is_catchall_email.text;
                 document.getElementById("is-mx-found").innerHTML = emailStatus.is_mx_found.text;
                 document.getElementById("is-smtp-valid").innerHTML = emailStatus.is_smtp_valid.text;
+
+                var scrollToResults = document.querySelector("#result-heading");
+                scrollToResults.scrollIntoView();
             } else {
                 alert('Error!' + xmlHttp.statusText)
                 console.log("Error", xmlHttp.statusText);

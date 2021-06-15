@@ -2,9 +2,11 @@
 
 * {
     margin: 0;
+    padding: 0;
     font-size: 1em;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     text-align: center;
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -36,7 +38,7 @@ header {
     -webkit-text-fill-color: transparent;
     padding: 10px;
     font-size: 2.5em;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Source Code Pro', monospace !important;
 }
 
 .fa-envelope-open {
@@ -67,16 +69,17 @@ header {
     padding-right:10px;
     height: 3em;
     width: 60vw;
-    color: white;
+    color: black;
     font-size: 1.2em;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Source Code Pro', monospace !important;
+    font-weight: 700;
     background-color: rgba(0, 0, 0, 0.1);
     border: 2px dashed black;
     border-radius: 5px;
 }
 
 ::placeholder {
-    color: white;
+    color: black;
     opacity: 0.85;
 }
 
@@ -102,16 +105,36 @@ header {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-#response {
-    margin: 0 25vw 0 25vw;
+#result-heading {
+    padding: 10px;
+    text-decoration: underline; 
+    color: black !important;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#email {
+    padding:10px 10px 20px 10px;
+    color: black !important;
+    font-weight: 600;
+    font-size: 1em;
 }
 
 #response-table, th, td {
-    padding: 5px;
+    padding: 10px;
     width: 45vw;
+    margin: 0 25vw 0 25vw;
+    color: black !important;
     border: 1px solid black;
-    border-radius: 5px;
     border-collapse: collapse;
+}
+
+#response-table th {
+    font-weight: 900;
+}
+
+#response-table td {
+    font-weight: 600;
 }
 
 #response-table a:link {
@@ -171,19 +194,111 @@ footer {
     margin: 0 25vw 0 25vw;
 }
 
+#support-message {
+    color: white; 
+    text-decoration: underline;
+}
+
+#support td {
+    border: none;
+}
+
+#smart-button-container {
+    width: 15vw;
+}
+
 /*------------------------------------------------------------*/
 /*Media queries are used to make this web app mobile-friendly.*/
 /*------------------------------------------------------------*/
 
+@media screen and (max-width: 550px) {
+
+    #support {
+        margin: 0;
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 500px) {
+    header {
+        margin: 0;
+    }
+
+    #response-table {
+        margin: 0 15vw 0 20vw;
+    }
+
+    footer {
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    
+    #response-table, th, td {
+        margin: 0 15vw 0 18vw;
+        font-size: 0.95em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    header {
+        margin: 0;
+    }
+
+    #email-validator {
+        margin: 0;
+    }
+
+    #response-table, th, td {
+        padding: 5px;
+    }
+
+    footer {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    header {
+        margin: 0;
+    }
+
+    #email-validator {
+        margin: 0;
+    }
+
+    #email-input {
+        font-size: 1em;
+    }
+
+    #response-table, th, td {
+        margin: 0 15vw 0 12vw;
+    }
+
+    footer {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 330px) {
+
     header {
         margin: 0;
         width: 100%;
     }
 
     #email-validator {
-        margin: 0;
+        padding: 10px 10px 20px 10px;
         width: 100%;
+    }
+
+    #response-table, th, td {
+        padding: 2px;
+        margin: 0 15vw 0 15vw;
     }
 
     footer {
@@ -192,12 +307,21 @@ footer {
     }
 
     #support {
-        margin: 0;
-        width: 100%;
+        padding-left: 25px;
+    }
+
+    #support tr {
+        display: block;
+        float: left;
+    }
+
+    #support td {
+        display: block;
+        padding: 5px;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 300px) {
 
     header {
         margin: 0;
@@ -205,10 +329,11 @@ footer {
     }
 
     #email-validator {
-        margin: 0;
         width: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
+    }
+
+    #response-table, th, td {
+        padding: 1px;
     }
 
     footer {
@@ -217,58 +342,63 @@ footer {
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 270px) {
 
     header {
         margin: 0;
         width: 100%;
     }
 
-    #email-validator {
-        margin: 0;
-        width: 100%;
-        padding-left: 2px;
-        padding-right: 2px;
+    #app-name {
+        font-size: 1.3em;
     }
 
-    #email-input {
-        font-size: 1em;
-    }
-
-    #response {
-        margin: 0 25% 0 25%;
-    }
-
-    footer {
-        margin: 0;
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 320px) {
-
-    header {
-        margin: 0;
-        width: 100%;
-    }
-
-    #email-validator {
-        margin: 0;
-        width: 100%;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    #email-input {
+    #app-desc {
         font-size: 0.8em;
     }
 
-    #response {
-        margin: 0 25% 0 25%;
+    #email-validator {
+        width: 100%;
+    }
+
+    #email-input {
+        font-size: 0.9em;
+    }
+
+    #btn-verify {
+        font-size: 0.9em;;
+    }
+
+    #email {
+        font-size: 0.8em;
+    }
+
+    #response-table, th, td {
+        font-size: 0.85em;
+        margin: 0 10vw 0 15vw;
     }
 
     footer {
         margin: 0;
         width: 100%;
+    }
+
+    #dev-message {
+        font-size: 0.85em;
+    }
+
+    #support {
+        padding-left: 5px;
+    }
+
+    #support-message {
+        font-size: 0.85em;
+    }
+}
+
+@media screen and (max-width: 230px) {
+
+    body {
+        position: absolute;
     }
 }
